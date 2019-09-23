@@ -10,11 +10,14 @@
 </head>
 
 <body>
-	<div id="application">
-	</div>
+	<div application></div>
 
 	<script>
-		require('./server');
+		window.electron = require('electron').ipcRenderer;
+	</script>
+
+	<script>
+		// require('./server');
 		require('./client');
 	</script>
 </body>

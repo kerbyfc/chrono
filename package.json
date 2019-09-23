@@ -12,7 +12,7 @@
     "build:client": "rm -rf ./dist/client || true && cross-env NODE_ENV=production webpack --config ./config/webpack.client.js",
     "build:server": "rm -rf ./dist/server || true && cross-env NODE_ENV=production webpack --config ./config/webpack.server.js",
     "build:electron": "cross-env NODE_ENV=production webpack --config ./config/webpack.electron.js",
-    "archive": "electron-packager ./dist/electron --all"
+    "archive": "electron-packager ./dist --all"
   },
   "author": "",
   "license": "ISC",

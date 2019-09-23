@@ -1,38 +1,49 @@
 // Modules to control application life and create native browser window
-const {app, BrowserWindow} = require('electron');
+const { app, BrowserWindow, ipcMain} = require('electron');
 const path = require('path');
 
 // Enable live reload for all the files inside dist directory
-require('electron-reload')(path.join(__dirname, 'dist'));
+// require('electron-reload')(__dirname);
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow;
-function createWindow () {
+function createWindow() {
     // Create the browser window.
     mainWindow = new BrowserWindow({
-		fullscreen: true,
-		simpleFullscreen: true,
-		alwaysOnTop: true,
-		transparent:true,
-		frame: false,
+        fullscreen: true,
+        simpleFullscreen: true,
+        alwaysOnTop: true,
+        transparent: true,
+        frame: false,
         webPreferences: {
             nodeIntegration: true
         },
-	})
+    })
 
-	mainWindow.setIgnoreMouseEvents(true);
-	mainWindow.setVisibleOnAllWorkspaces(true);
+    mainWindow.setIgnoreMouseEvents(true);
+    mainWindow.setVisibleOnAllWorkspaces(true);
 
-	mainWindow.addListener('focus', () => {
-		mainWindow.setOpacity(1);
-		mainWindow.setIgnoreMouseEvents(false);
-	});
+    const focus = () => {
+        mainWindow.setIgnoreMouseEvents(false);
+        mainWindow.webContents.send('focusChanged', true);
+    };
 
-	mainWindow.addListener('blur', () => {
-		mainWindow.setOpacity(0.5);
-		mainWindow.setIgnoreMouseEvents(true);
-	});
+    const blur = () => {
+        mainWindow.setIgnoreMouseEvents(true);
+        mainWindow.webContents.send('focusChanged', false);
+    };
+
+    mainWindow.addListener('focus', focus);
+    mainWindow.addListener('blur', blur);
+
+    ipcMain.on('started', (_, {type}) => {
+        if (type === 'pomodoro') {
+            blur();
+        } else {
+            focus();
+        }
+    });
 
     // and load the index.html of the app.
     mainWindow.loadFile('index.html');
@@ -44,7 +55,7 @@ function createWindow () {
         // in an array if your app supports multi windows, this is the time
         // when you should delete the corresponding element.
         mainWindow = null
-    })
+    });
 }
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
