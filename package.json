@@ -1,0 +1,40 @@
+{
+  "name": "chrono",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "productName": "Chrono",
+  "scripts": {
+    "start": "npm run start:client & npm run start:electron",
+    "start:client": "webpack-dev-server --config ./config/webpack.client.js --content-base dist/client",
+    "start:electron": "electron ./dist",
+    "build": "npm run build:client && npm run build:server && npm run build:electron",
+    "build:client": "rm -rf ./dist/client || true && cross-env NODE_ENV=production webpack --config ./config/webpack.client.js",
+    "build:server": "rm -rf ./dist/server || true && cross-env NODE_ENV=production webpack --config ./config/webpack.server.js",
+    "build:electron": "cross-env NODE_ENV=production webpack --config ./config/webpack.electron.js",
+    "archive": "electron-packager ./dist/electron --all"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^6.0.9",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "copy-webpack-plugin": "^5.0.4",
+    "cross-env": "^6.0.0",
+    "css-loader": "^3.2.0",
+    "electron-packager": "^14.0.6",
+    "electron-reload": "^1.5.0",
+    "mini-css-extract-plugin": "^0.8.0",
+    "style-loader": "^1.0.0",
+    "svelte": "^3.12.1",
+    "svelte-loader": "^2.13.6",
+    "ts-loader": "^6.1.2",
+    "typescript": "^3.6.3",
+    "webpack": "^4.40.2",
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.8.1",
+    "webpack-node-externals": "^1.7.2"
+  }
+}
