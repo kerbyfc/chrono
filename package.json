@@ -7,12 +7,15 @@
   "scripts": {
     "start": "npm run start:client & npm run start:electron",
     "start:client": "webpack-dev-server --config ./config/webpack.client.js --content-base dist/client",
+    "start:server": "node ./dist/server/index.js",
     "start:electron": "electron ./dist",
     "build": "npm run build:client && npm run build:server && npm run build:electron",
     "build:client": "rm -rf ./dist/client || true && cross-env NODE_ENV=production webpack --config ./config/webpack.client.js",
     "build:server": "rm -rf ./dist/server || true && cross-env NODE_ENV=production webpack --config ./config/webpack.server.js",
     "build:electron": "cross-env NODE_ENV=production webpack --config ./config/webpack.electron.js",
-    "archive": "electron-packager ./dist --all"
+    "archive:osx": "electron-packager ./dist --platform=darwin --out ./archive",
+    "archive:install:osx": "npm run archive:osx && cp -fr ./archive/Chrono-darwin-x64/Chrono.app /Applications/Chrono.app",
+    "prettier": "prettier --write --plugin-search-dir=. src/**/*.svelte"
   },
   "author": "",
   "license": "ISC",
@@ -21,12 +24,21 @@
     "express": "^4.17.1"
   },
   "devDependencies": {
+    "babel-eslint": "^10.0.3",
     "copy-webpack-plugin": "^5.0.4",
     "cross-env": "^6.0.0",
     "css-loader": "^3.2.0",
     "electron-packager": "^14.0.6",
     "electron-reload": "^1.5.0",
+    "eslint": "^6.4.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.3.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-svelte3": "^2.7.3",
     "mini-css-extract-plugin": "^0.8.0",
+    "prettier": "^1.18.2",
+    "prettier-plugin-svelte": "^0.7.0",
     "style-loader": "^1.0.0",
     "svelte": "^3.12.1",
     "svelte-loader": "^2.13.6",

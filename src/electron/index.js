@@ -1,9 +1,5 @@
 // Modules to control application life and create native browser window
-const { app, BrowserWindow, ipcMain} = require('electron');
-const path = require('path');
-
-// Enable live reload for all the files inside dist directory
-// require('electron-reload')(__dirname);
+const {app, BrowserWindow, ipcMain} = require('electron');
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
