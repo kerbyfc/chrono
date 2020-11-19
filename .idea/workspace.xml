@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c315db01-7673-4880-a3d0-8808729e4b40" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/config/webpack.client.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/webpack.client.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/components/App.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/components/App.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/public/global.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/public/index.html" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="package.json" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="2" />
+  </component>
+  <component name="ProjectId" id="1kVQ2TF2UVlO5qB1I7xMOt8HJIr" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c315db01-7673-4880-a3d0-8808729e4b40" name="Default Changelist" comment="" />
+      <created>1605783071498</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1605783071498</updated>
+      <workItem from="1605783072526" duration="242000" />
+      <workItem from="1605783618733" duration="4616000" />
+      <workItem from="1605798826820" duration="3302000" />
+      <workItem from="1605803255257" duration="17000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="669" y="401" key="#ESLint" timestamp="1605783714269">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="669" y="401" key="#ESLint/0.0.1680.1050@0.0.1680.1050" timestamp="1605783714269" />
+    <state x="460" y="238" width="1102" height="646" key="find.popup" timestamp="1605800197791">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="460" y="238" width="1102" height="646" key="find.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1605800197791" />
+    <state x="421" y="18" width="838" height="1032" key="search.everywhere.popup" timestamp="1605801269756">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="421" y="18" width="838" height="1032" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1605801269756" />
+  </component>
+</project>
